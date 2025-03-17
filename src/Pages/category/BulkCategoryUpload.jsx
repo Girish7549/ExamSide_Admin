@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import {AppSidebar, AppFooter, AppHeader } from '../../components/index';
-import BulkCategoryUploads from '../../components/Category/BulkCategoryUpload';
 
 const BulkCategoryUpload = () => {
   const isAuthenticated = useSelector((state) => state.authenticated);
