@@ -151,52 +151,6 @@ const App = () => {
         <Route path="/allusers" element={<ProtectedRoute><AllUser /></ProtectedRoute>} />
         <Route path="/adduser" element={<ProtectedRoute><AddUser /></ProtectedRoute>} />
       </Routes>
-
-      {/* <Routes>
-        <Route path="/" element={<DefaultLayout />} />
-        <Route path="/unitlist" element={<UnitList />} />
-        <Route path="/addunit" element={<AddUnit />} />
-        <Route path="/alltopics" element={<TopicLsit />} />
-        <Route path="/addtopic" element={<AddTopic />} />
-        <Route path="/allcare" element={<CareInstructionPageList />} />
-        <Route path="/addcare" element={<AddCareInstructionPage />} />
-        <Route path="/alladditionalinfo" element={<AdditionalInfoPageList />} />
-        <Route path="/addadditionalinfo" element={<AddAdditionalInfoPage />} />
-        <Route path="/allchapter" element={<TestimonialPage />} />
-        <Route path="/addchapter" element={<AddTestimonialPage />} />
-        <Route path="/allquestions" element={<Questions />} />
-        <Route path="/addquestion" element={<AddQuestion />} />
-        <Route path="/alladsbanner" element={<AdsBanner />} />
-        <Route path="/addadsbanner" element={<AddAdsBanner />} />
-        <Route path="/video" element={<VideoPage />} />
-        <Route path="/addvideo" element={<AddVideoPage />} />
-        <Route path="/product" element={<Products />} />
-        <Route path="/addproduct" element={<AddProduct />} />
-        <Route path="/categorylist" element={<CategoryList />} />
-        <Route path="/bulk-category-upload" element={<BulkCategoryUpload />} />
-        <Route path="/bulk-subcategory-upload" element={<BulkSubCategoryUpload />} />
-        <Route path="/bulk-product-upload" element={<BulkProductUpload />} />
-        <Route path="/subcategorylist" element={<SubCategoryList />} />
-        <Route path="/addsubcategory" element={<AddSubCategory />} />
-        <Route path="/addcategory" element={<AddCategory />} />
-        <Route path="/shift" element={<Shifts />} />
-        <Route path="/shift-subject" element={<ShiftSubject />} />
-        <Route path="/add-shift" element={<AddShift />} />
-        <Route path="/add-shift-subject" element={<AddShiftSubject />} />
-        <Route path="/news-email-letter" element={<NewsEmailLetter />} />
-        <Route path="/product-review" element={<ProductReview />} />
-        <Route path="/logo" element={<Logo />} />
-        <Route path="/subject" element={<Subject />} />
-        <Route path="/addsubject" element={<AddSubject />} />
-        <Route path="/addcolortheme" element={<AddColorTheme />} />
-        <Route path="/colortheme" element={<ColorTheme />} />
-        <Route path="/foodlist" element={<FoodList />} />
-        <Route path="/addfood" element={<AddFood />} />
-        <Route path="/allusers" element={<AllUser />} />
-        <Route path="/adduser" element={<AddUser />} />
-        <Route path="/login" element={<Login />} />
-      </Routes> */}
-
       <ToastContainer autoClose={1000} />
     </Suspense>
   )
