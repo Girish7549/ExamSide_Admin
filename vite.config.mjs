@@ -5,27 +5,39 @@ import autoprefixer from 'autoprefixer'
 
 export default defineConfig(() => {
   return {
-    base: './',
+    base: './', // Ensure assets are linked relatively
     build: {
-      outDir: 'build',
+      outDir: 'dist', // Change output directory to 'dist' (Vercel expected default)
+      rollupOptions: {
+        output: {
+          // Manual chunking for better splitting of dependencies
+          manualChunks(id) {
+            // If it's from node_modules, bundle it separately into a vendor chunk
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+          },
+        },
+      },
+      chunkSizeWarningLimit: 1000, // Increase the warning limit (to 1MB)
     },
     css: {
       postcss: {
         plugins: [
-          autoprefixer({}), // add options if needed
+          autoprefixer({}), // Add options if needed
         ],
       },
     },
     esbuild: {
       loader: 'jsx',
-      include: /src\/.*\.jsx?$/,
-      exclude: [],
+      include: /src\/.*\.jsx?$/, // Specify files to transpile with esbuild
+      exclude: [], // Exclude none, you can define exclusions if needed
     },
     optimizeDeps: {
-      force: true,
+      force: true, // Force Vite to pre-optimize dependencies
       esbuildOptions: {
         loader: {
-          '.js': 'jsx',
+          '.js': 'jsx', // Specify .js files to use JSX loader
         },
       },
     },
@@ -33,16 +45,16 @@ export default defineConfig(() => {
     resolve: {
       alias: [
         {
-          find: 'src/',
+          find: 'src/', // Custom alias for 'src' directory
           replacement: `${path.resolve(__dirname, 'src')}/`,
         },
       ],
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.scss'],
     },
     server: {
-      port: 3000,
+      port: 3000, // Set development server port
       proxy: {
-        // https://vitejs.dev/config/server-options.html
+        // Add proxy configurations if needed for API calls
       },
     },
   }
