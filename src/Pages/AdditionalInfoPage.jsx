@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index';
+import {AppSidebar, AppFooter, AppHeader } from '../components/index';
 import AllAdditionalnfo from '../components/Additionalnfo/AllAdditionalnfo';
 function AdditionalInfoPage() {
   return (

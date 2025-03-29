@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { CImage } from '@coreui/react';
 import { FaEye, FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
 import SearchBar from '../components/SearchBar';
-import ModalUserView from '../components/ModalUserView';
 import { AppSidebar, AppHeader } from '../components'; 
 import ModalEdit from './ModalEdit';
 import ModalCreate from './ModalCreate';

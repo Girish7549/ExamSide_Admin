@@ -248,58 +248,58 @@ const _nav = [
       },
     ],
   },
-  {
-    component: CNavGroup,
-    name: 'Logo',
-    icon: <CIcon icon={cilImage} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Logo List',
-        icon: <CIcon icon={cilImage} customClassName="nav-icon" />,
-        to: '/logo',
-      },
-    ],
-  },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Logo',
+  //   icon: <CIcon icon={cilImage} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Logo List',
+  //       icon: <CIcon icon={cilImage} customClassName="nav-icon" />,
+  //       to: '/logo',
+  //     },
+  //   ],
+  // },
 
-  {
-    component: CNavGroup,
-    name: 'Video',
-    icon: <CIcon icon={cilVideo} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Video List',
-        icon: <CIcon icon={cilVideo} customClassName="nav-icon" />,
-        to: '/video',
-      },
-      {
-        component: CNavItem,
-        name: 'Add Video',
-        icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
-        to: '/addvideo',
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: 'Color',
-    icon: <CIcon icon={cilBrush} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Color List',
-        icon: <CIcon icon={cilBrush} customClassName="nav-icon" />,
-        to: '/colortheme',
-      },
-      {
-        component: CNavItem,
-        name: 'Add Color',
-        icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
-        to: '/addcolortheme',
-      },
-    ],
-  },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Video',
+  //   icon: <CIcon icon={cilVideo} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Video List',
+  //       icon: <CIcon icon={cilVideo} customClassName="nav-icon" />,
+  //       to: '/video',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Add Video',
+  //       icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
+  //       to: '/addvideo',
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: 'Color',
+  //   icon: <CIcon icon={cilBrush} customClassName="nav-icon" />,
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: 'Color List',
+  //       icon: <CIcon icon={cilBrush} customClassName="nav-icon" />,
+  //       to: '/colortheme',
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: 'Add Color',
+  //       icon: <CIcon icon={cilPlus} customClassName="nav-icon" />,
+  //       to: '/addcolortheme',
+  //     },
+  //   ],
+  // },
 ]
 
 export default _nav

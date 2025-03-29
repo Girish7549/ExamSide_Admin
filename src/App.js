@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Spinner } from 'react-bootstrap'
 import './scss/style.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import axios from 'axios'
 import ProtectedRoute from './components/Hooks/ProtectedRoute'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
@@ -33,8 +32,7 @@ const AddQuestion = React.lazy(() => import('./Pages/AllQuestions/AddQuestion'))
 const AddShiftQuestion = React.lazy(() => import('./Pages/AllQuestions/AddShiftQuestion'))
 const Questions = React.lazy(() => import('./Pages/AllQuestions/Questions'))
 const AddAdsBanner = React.lazy(() => import('./Pages/adsbanner/AddAdsBanner'))
-const AdsBanner = React.lazy(() => import('./Pages/adsbanner/AdsBanner'))
-const ContactUs = React.lazy(() => import('./Pages/contactus/ContactUs'))
+const Options = React.lazy(() => import('./Pages/adsbanner/AdsBanner'))
 const NewsEmailLetter = React.lazy(() => import('./Pages/newsemailletter/NewsEmailLetter'))
 const ProductReview = React.lazy(() => import('./Pages/productreview/ProductReview'))
 const Logo = React.lazy(() => import('./Pages/logo/Logo'))
@@ -85,7 +83,7 @@ const App = () => {
         <Route path="/allquestions" element={<ProtectedRoute><Questions /></ProtectedRoute>} />
         <Route path="/addquestion" element={<ProtectedRoute><AddQuestion /></ProtectedRoute>} />
         <Route path="/addShiftQuestion" element={<ProtectedRoute><AddShiftQuestion /></ProtectedRoute>} />
-        <Route path="/alladsbanner" element={<ProtectedRoute><AdsBanner /></ProtectedRoute>} />
+        <Route path="/alladsbanner" element={<ProtectedRoute><Options /></ProtectedRoute>} />
         <Route path="/addadsbanner" element={<ProtectedRoute><AddAdsBanner /></ProtectedRoute>} />
         <Route path="/video" element={<ProtectedRoute><VideoPage /></ProtectedRoute>} />
         <Route path="/addvideo" element={<ProtectedRoute><AddVideoPage /></ProtectedRoute>} />
