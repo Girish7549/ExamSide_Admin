@@ -43,9 +43,6 @@ const Products = React.lazy(() => import('./Pages/product/Products'))
 const AddProduct = React.lazy(() => import('./Pages/product/AddProduct'))
 const CategoryList = React.lazy(() => import('./Pages/category/CategoryList'))
 const AddCategory = React.lazy(() => import('./Pages/category/AddCategory'))
-const BulkCategoryUpload = React.lazy(() => import('./Pages/category/BulkCategoryUpload'))
-const BulkSubCategoryUpload = React.lazy(() => import('./Pages/subcategory/BulkSubCategoryUpload'))
-const BulkProductUpload = React.lazy(() => import('./Pages/product/BulkProductUpload'))
 const SubCategoryList = React.lazy(() => import('./Pages/subcategory/SubcategoryList'))
 const AddColorTheme = React.lazy(() => import('./Pages/colortheme/AddColorTheme'))
 const ColorTheme = React.lazy(() => import('./Pages/colortheme/ColorTheme'))
@@ -57,41 +54,7 @@ const AddUser = React.lazy(() => import('./Pages/user/AddUser'))
 const Login = React.lazy(() => import('./Pages/Login'))
 
 const App = () => {
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate(); // Use useNavigate here
-  // const isAuthenticated = useSelector((state) => state.authenticated);
-
-  // const checkAndRelogin = async () => {
-
-  //   if (!isAuthenticated) {
-  //     try {
-  //       const response = await axios.get(`http://localhost:9000/api/check`, { withCredentials: true });
-  //       const data = response.data;
-
-  //       if (data) {
-  //         dispatch({
-  //           type: 'LOGIN',
-  //           userId: data.user.id,
-  //           email: data.user.email,
-  //           name: data.user.name,
-  //           role: data.user.role,
-  //           profileImage: data.user.profileImageUrl,
-
-  //         });
-  //         navigate('/'); // Redirect to the homepage/dashboard
-  //       }
-  //     } catch (error) {
-  //       navigate('/login')
-
-  //       console.error('Re-login failed:', error);
-
-  //     }
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   checkAndRelogin();
-  // }, []);
+ 
   return (
     <Suspense
       fallback={
@@ -129,9 +92,6 @@ const App = () => {
         <Route path="/product" element={<ProtectedRoute><Products /></ProtectedRoute>} />
         <Route path="/addproduct" element={<ProtectedRoute><AddProduct /></ProtectedRoute>} />
         <Route path="/categorylist" element={<ProtectedRoute><CategoryList /></ProtectedRoute>} />
-        <Route path="/bulk-category-upload" element={<ProtectedRoute><BulkCategoryUpload /></ProtectedRoute>} />
-        <Route path="/bulk-subcategory-upload" element={<ProtectedRoute><BulkSubCategoryUpload /></ProtectedRoute>} />
-        <Route path="/bulk-product-upload" element={<ProtectedRoute><BulkProductUpload /></ProtectedRoute>} />
         <Route path="/subcategorylist" element={<ProtectedRoute><SubCategoryList /></ProtectedRoute>} />
         <Route path="/addsubcategory" element={<ProtectedRoute><AddSubCategory /></ProtectedRoute>} />
         <Route path="/addcategory" element={<ProtectedRoute><AddCategory /></ProtectedRoute>} />
